@@ -6,7 +6,7 @@ from config import Config
 from openai import OpenAI
 import uvicorn, aiohttp, json, jwt, boto3
 
-app = FastAPI()
+app = FastAPI(docs_url=None, redoc_url=None)
 app.add_middleware(CORSMiddleware, allow_headers=['*'], allow_methods=['*'], allow_origins=['*'])
 
 config = Config()
